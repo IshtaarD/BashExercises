@@ -5,10 +5,12 @@ echo " ----------------------------"
 
 #function to check if the number is a complex or imaginary number
 checkIfRealNum () { 
-    if [[ $1 == *'i'* ]];
+
+    while [[ $1 == *'i'* ]];
     then
-        echo "Your number is not a real number..."
+        echo "Your number is not a real number... "
     fi
+
 }
 
 
@@ -18,14 +20,19 @@ echo $num1
 
 checkIfRealNum $num1
 
+while checkIfRealNum is true;
+do 
+    read -p "Enter another number... "
+    
+done 
 
 read -p "Enter your second real number:      " num2; 
 echo $num2 
 
 checkIfRealNum $num2
 
-# Check that the number is not a complex number or imaginary number. 
-
+# adding both numbers 
+echo "adding your numbers together..."
 
 
 
